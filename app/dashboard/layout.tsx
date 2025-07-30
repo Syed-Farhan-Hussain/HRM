@@ -13,7 +13,7 @@ export default function DashboardLayout({
 }) {
   return (
     <SidebarProvider defaultOpen={true}>
-      <div className="flex min-h-screen bg-slate-50">
+      <div className="flex min-h-screen bg-slate-50" style={{width:"100% !important"}}>
         <AppSidebar />
         <div className="flex-1 flex flex-col">
           <TopNavbar />

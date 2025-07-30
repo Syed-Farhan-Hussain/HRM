@@ -110,7 +110,7 @@ export default function EmployeesPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full max-w-full px-4">
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
@@ -192,8 +192,8 @@ export default function EmployeesPage() {
       </div>
 
       {/* Search and Filters */}
-      <Card className="border-0 shadow-sm bg-white">
-        <CardContent className="p-6">
+      <div className="bg-white border border-slate-200 rounded-lg shadow-sm w-full">
+        <div className="p-6">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-4 h-4" />
@@ -209,15 +209,15 @@ export default function EmployeesPage() {
               Filters
             </Button>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Employee Table */}
-      <Card className="border-0 shadow-sm bg-white">
-        <CardHeader>
-          <CardTitle>All Employees ({filteredEmployees.length})</CardTitle>
-        </CardHeader>
-        <CardContent>
+      <div className="bg-white border border-slate-200 rounded-lg shadow-sm w-full">
+        <div className="px-6 py-4 border-b border-slate-200">
+          <h3 className="text-lg font-semibold text-slate-900">All Employees ({filteredEmployees.length})</h3>
+        </div>
+        <div className="p-6">
           <Table>
             <TableHeader>
               <TableRow>
@@ -280,8 +280,8 @@ export default function EmployeesPage() {
               ))}
             </TableBody>
           </Table>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Employee Profile Modal */}
       <Dialog open={!!selectedEmployee} onOpenChange={() => setSelectedEmployee(null)}>
